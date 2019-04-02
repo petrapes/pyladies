@@ -1,0 +1,4 @@
+jmeno = input(print("Zadej jmeno:"))
+prijmeni = input(print("Zadej prijmeni:"))
+print(jmeno[0].upper()) + print(prijmeni[0].upper())
+ 

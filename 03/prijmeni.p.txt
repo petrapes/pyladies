@@ -1,0 +1,2 @@
+zaznam = ['pepa novák', 'Jiří Sládek', 'Ivo navrátil', 'jan Poledník'].split()
+print(zaznam)
