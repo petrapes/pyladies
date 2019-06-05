@@ -1,6 +1,9 @@
 from random import randrange
 
+
 class Robot():
+
+    
     max_damage = 5
 
     def __init__(self, lifes, jmeno):
@@ -12,7 +15,6 @@ class Robot():
         other robot to defend."""
         damage = randrange(0, self.max_damage)
         target_robot.defend(damage)
-
 
     def _take_damage(self, damage):
         """Sets new number of lifes when not already 0."""
@@ -33,21 +35,31 @@ class Robot():
         """Default attack. Simply makes damage."""
         self._make_damage(target_robot)
 
+        
 class Aggressive(Robot):
+
+    
     max_damage = 7
     def attack(self, target_robot):
         """Makes damage to the other robot twice. Special for aggresive robot."""
         self._make_damage(target_robot)
         self._make_damage(target_robot)
 
+        
+        
 class Defensive(Robot):
+   
+
     max_damage = 3    
     
     def defend(self, damage):
         """Special for deffensive robot, takes only half damage."""
         self._take_damage(damage // 2)
 
+        
 class Angry(Robot):
+    
+    
     max_damage = 5
     
     def complaining(self, lifes):
@@ -64,7 +76,10 @@ class Angry(Robot):
     def defend(self, damage):
         self._take_damage(damage // 3)
 
-class SuprAngry(Angry, Robot):
+        
+class SuprAngry(Angry):
+    
+    
     max_damage = 3
 
     def complaining(self, lifes):
@@ -79,6 +94,7 @@ aggr = Aggressive(15, "Aggr")
 deff = Defensive(7, "Deff")
 henry = Angry(15, "Henry")
 jack = SuprAngry(7, "Jack")
+
 
 while True:
     aggr.attack(henry)
