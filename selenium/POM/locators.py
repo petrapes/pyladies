@@ -16,3 +16,6 @@ class Locators():
     follow_button_xpath = "//button[contains(text(),'Sledování')]"
     following_button_xpath = "//button[contains(text(),'Sleduji')]"
     end_following_confirm_xpath = "//button[contains(text(),'Zrušit sledování')]"
+
+    # Followers locators
+    followers_link_xpath = "//ul[contains(@class,'k9GMp')]//li[2]//a[1]"
